@@ -1,0 +1,84 @@
+<div class="wrapper">
+    
+    <div class="main">
+      
+      
+      
+      
+        
+        <div class="section section-dark">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 ml-auto mr-auto text-center">
+                        <h2 class="title">We happy to help you</h2>
+                        <p class="description">just mail us about your all queries.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section section-image section-login" style="background-image: url('assets/img/login-image.jpg');">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-12 ml-auto mr-auto">
+                        <div class="card card-register">
+                            <h3 class="title">Contact US</h3>
+                            
+                            <form class="register-form" [formGroup]="RegisterForm" (ngSubmit)="sendQuery(RegisterForm.value, RegisterForm.valid)" novalidate>
+                                <label>Name</label>
+                                <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">
+                                  <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                                        <i class="nc-icon nc-circle-10"></i>
+                                    </span>
+                                  </div>
+
+                                    <input type="text" class="form-control" placeholder="Name" formControlName="Name" (focus)="focus=true" (blur)="focus=false" >
+                                    <div class="form-control-feedback" *ngIf="RegisterForm.hasError('required', ['Name']) && isFormSubmitted"  >
+                                        <p style="color: black;"> *Name is Required</p>
+                                    
+                                    </div>
+                                    
+                                </div>
+                                <br>
+
+                                <label>Mobile No</label>
+                                <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus1===true}">
+                                  <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                                        <i class="nc-icon nc-mobile"></i>
+                                    </span>
+                                  </div>
+                                    <input type="text" class="form-control" placeholder="Phone No" formControlName="Phone" (focus)="focus1=true" (blur)="focus1=false" >
+                                    <div class="form-control-feedback" *ngIf="RegisterForm.hasError('required', ['Phone']) && isFormSubmitted"  >
+                                        <p style="color: black;"> *Phone is Required</p>
+                                    
+                                    </div>
+                                </div>
+                                <br>
+                                <label>Your Query</label>
+                                <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus1===true}">
+                                  
+                                  <textarea class="form-control" rows="4" placeholder="Tell us your thoughts" formControlName="Query" (focus)="focus1=true" (blur)="focus1=false">
+                                    
+                                  </textarea>
+                                  <div class="form-control-feedback" *ngIf="RegisterForm.hasError('required', ['Query']) && isFormSubmitted"  >
+                                    <p style="color: black;"> *Query is Required</p>
+                                
+                                </div>
+                                   
+                                </div>
+                                <button class="btn btn-danger btn-block btn-round">Send Query</button>
+                            </form>
+                            
+                        </div>
+                        <div class="col text-center" routerLinkActive="active">
+                            <a [routerLink]="['/home']" class="btn btn-outline-neutral btn-round btn-lg">Back to Home</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+        
+    </div>
+</div>

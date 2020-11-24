@@ -1,0 +1,64 @@
+<div class="wrapper" id="wrapper">
+    <div class="page-header section-dark" style="background-image: url('assets/img/blogs.jpg')">
+        <div class="filter"></div>
+        <div class="content-center">
+            <div class="container">
+                <div class="title-brand">
+                    <div class="angular-logo">
+                        <!-- <img src="assets/img/angular2-logo.png" alt=""> -->
+                        <i class="nc-icon nc-atom-"></i>
+                    </div>
+                    <h1 class="presentation-title">Blogs</h1>
+                    <!-- <div class="fog-low">
+                        <img src="assets/img/fog-low.png" alt="">
+                    </div>
+                    <div class="fog-low right">
+                        <img src="assets/img/fog-low.png" alt="">
+                    </div> -->
+                </div>
+
+                <h2 class="presentation-subtitle text-center">Our Recent Stories</h2>
+            </div>
+        </div>
+        <!-- <div class="moving-clouds" style="background-image: url('assets/img/clouds.png'); "></div> -->
+        
+    </div>
+       
+<div class="section" id="carousel">
+    <div class="container" >
+                            <div id="gallery">
+                                <div class="tim-title">
+                                    <h3>Latest Blogs</h3>
+                                </div>
+                            </div>
+                            <div class="form-group row" *ngFor="let item of MainBlog;">       
+                                <label class="col-sm-3" style="padding-top: 6px;"><h4>{{item.Title}}</h4></label>
+                                  
+                                <div class="col-sm-14" style="padding-top: 6px;">
+                                    <img src="{{item.img1}}" style="width: 100%;height: 400px;">
+                                </div>      
+                                <div class="col-sm-12" style="padding-top: 6px;">
+                                    <div class="para">{{getShort(item.Sub1Content,300)}}
+                                    
+                                    </div>
+                                    
+                                     <button type="button" (click)="SaveBlog(item)" class="btn btn-outline-dark btn-sm"><p style="color: black;"> Read More <i class="nc-icon nc-simple-delete"></i><i class="nc-icon nc-minimal-right"></i></p></button>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group row" >
+
+                                <div class="col-sm-3" style="padding-top: 26px;" *ngFor="let item of Blogs;">
+                                    <label> <h4>{{item.Title}}</h4></label>
+                                    <img src={{item.img1}} style="width: 100%; height: 60%;">
+                                    <div class="para">{{getShort(item.Sub1Content,80)}}</div>
+                                    <br>
+                                    <button type="button" (click) ="SaveBlog(item)" class="btn btn-outline-dark btn-sm"><p style="color: black;"> Read More <i class="nc-icon nc-simple-delete"></i><i class="nc-icon nc-minimal-right"></i></p></button>
+                                </div>
+                            </div>
+
+    </div>
+</div>
+
+   
+</div>

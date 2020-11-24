@@ -1,0 +1,368 @@
+<div class="wrapper">
+    <div class="page-header section-dark" style="background-image: url('assets/img/enroll.png')">
+        <div class="filter"></div>
+        <div class="content-center">
+            <div class="container">
+                <div class="title-brand">
+                    <div class="angular-logo">
+                        <!-- <img src="assets/img/angular2-logo.png" alt=""> -->
+                        <i class="nc-icon nc-atom-"></i>
+                    </div>
+                    <h1 class="presentation-title">Enroll Now</h1>
+                    
+                </div>
+
+                <h2 class="presentation-subtitle text-center">Yoga and Dance Club</h2>
+            </div>
+        </div>
+        
+    </div>
+
+
+    <!-- Registration start page-header -->
+
+
+    
+<div class="section" id="carousel">
+    <div class="container" >
+                            <div id="gallery">
+                                <div class="tim-title">
+                                    <h3>Join with our Family</h3>
+                                </div>
+                                
+                                <!-- first line gallery start -->
+                                    <form [formGroup]="RegisterForm" (ngSubmit)="login(RegisterForm.value, RegisterForm.valid)" novalidate>
+
+                                        
+                                        <div class="form-group row" style="padding-left: 20%;">
+                                            
+                                            <label class="col-sm-3" style="padding-top: 6px;">Full Name in capital</label>
+                                            <div class="col-md-5">
+                                                <div class="form-group has-feedback" [ngClass]="{'has-error': RegisterForm.get('Name').errors && isFormSubmitted}">
+                                                    <input type="email" class="form-control" placeholder="Name" formControlName="Name">
+                                                    <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                                            
+                                                    <span *ngIf="RegisterForm.hasError('required', ['Name']) && isFormSubmitted" class="text-danger">
+                                                        Name is required.
+                                                    </span>
+                                                    <span *ngIf="RegisterForm.hasError('Name', ['Name']) && isFormSubmitted" class="text-danger">
+                                                    Name is Required
+                                                    </span>
+                                                    </div>
+                                            </div>
+                                        
+                                        </div>
+                                        <div class="form-group row" style="padding-left: 20%;">
+                                            
+                                            <label class="col-sm-3" style="padding-top: 6px;">Class & Division</label>
+                                            <div class="col-md-5">
+                                                <div class="form-group has-feedback" [ngClass]="{'has-error': RegisterForm.get('Name').errors && isFormSubmitted}">
+                                                    <input type="email" class="form-control" placeholder="Class and Division" formControlName="Class">
+                                                    <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                                            
+                                                    <span *ngIf="RegisterForm.hasError('required', ['Class']) && isFormSubmitted" class="text-danger">
+                                                        Class and Division is required.
+                                                    </span>
+                                                    <span *ngIf="RegisterForm.hasError('Class', ['Class']) && isFormSubmitted" class="text-danger">
+                                                    Clas and Division is Required
+                                                    </span>
+                                                    </div>
+                                            </div>
+                                        
+                                        </div>
+                                        <div class="form-group row" style="padding-left: 20%;">
+                                            
+                                            <label class="col-sm-3" style="padding-top: 6px;">Date of birth</label>
+                                            <div class="col-md-5">
+                                                <div class="form-group has-feedback" [ngClass]="{'has-error': RegisterForm.get('Dob').errors && isFormSubmitted}">
+
+                                                    <input class="form-control" formControlName="Dob" placeholder="yyyy-mm-dd" name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker" (click)="d.toggle()">
+                                                        <span class="input-group-addon">
+                                                                <span class="glyphicon glyphicon-calendar"><i class="fa fa-calendar" aria-hidden="true"></i></span>
+                                                            </span>
+                                                    <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                                            
+                                                    <span *ngIf="RegisterForm.hasError('required', ['Dob']) && isFormSubmitted" class="text-danger">
+                                                        Date of Birth  and Division is Required
+                                                    </span>
+                                                    <span *ngIf="RegisterForm.hasError('Dob', ['Dob']) && isFormSubmitted" class="text-danger">
+                                                    Date of Birth is Required
+                                                    </span>
+                                                    </div>
+                                            </div>
+                                        
+                                        </div>
+                                         <div class="form-group row" style="padding-left: 20%;">
+                                            
+                                            <label class="col-sm-3" style="padding-top: 6px;">Sex</label>
+                                            <div class="col-md-5">
+                                                <div class="form-group has-feedback" [ngClass]="{'has-error': RegisterForm.get('Sex').errors && isFormSubmitted}">
+                                                    <div class="form-group row">
+                                                        <div class="col-md-5">
+                                                            <div class="form-check-radio">
+                                                                <label class="form-check-label">
+                                                                  <input class="form-check-input" formControlName="Sex" type="radio" name="Sex" id="exampleRadios1" value="Male" >
+                                                                  Male
+                                                                  <span class="form-check-sign"></span>
+                                                                </label>
+                                                              </div>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <div class="form-check-radio">
+                                                                <label class="form-check-label">
+                                                                  <input class="form-check-input" formControlName="Sex" type="radio" name="Sex" id="exampleRadios1" value="Female" >
+                                                                    Female
+                                                                  <span class="form-check-sign"></span>
+                                                                </label>
+                                                              </div>
+                                                        </div>
+                                                    </div>
+                                                    <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                                            
+                                                    <span *ngIf="RegisterForm.hasError('required', ['Sex']) && isFormSubmitted" class="text-danger">
+                                                        Sex is Required
+                                                    </span>
+                                                    <span *ngIf="RegisterForm.hasError('Sex', ['Sex']) && isFormSubmitted" class="text-danger">
+                                                    Sex is Required
+                                                    </span>
+                                                    </div>
+                                            </div>
+                                        
+                                        </div>
+                                        <div class="form-group row" style="padding-left: 20%;">
+                                            
+                                            <label class="col-sm-3" style="padding-top: 6px;">Name of Father/Mother/Guardian</label>
+                                            <div class="col-md-5">
+                                                <div class="form-group has-feedback" [ngClass]="{'has-error': RegisterForm.get('Guardian').errors && isFormSubmitted}">
+                                                    <input type="email" class="form-control" placeholder="Name of Father/Mother/Guardian" formControlName="Guardian">
+                                                    <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                                            
+                                                    <span *ngIf="RegisterForm.hasError('required', ['Guardian']) && isFormSubmitted" class="text-danger">
+                                                        Name of Father/Mother/Guardian is required.
+                                                    </span>
+                                                    <span *ngIf="RegisterForm.hasError('Guardian', ['Guardian']) && isFormSubmitted" class="text-danger">
+                                                        Name of Father/Mother/Guardian is Required
+                                                    </span>
+                                                    </div>
+                                            </div>
+                                        
+                                        </div>
+                                        <div class="form-group row" style="padding-left: 20%;">
+                                            
+                                            <label class="col-sm-3" style="padding-top: 6px;">Occupation</label>
+                                            <div class="col-md-5">
+                                                <div class="form-group has-feedback" [ngClass]="{'has-error': RegisterForm.get('Occupation').errors && isFormSubmitted}">
+                                                    <input type="email" class="form-control" placeholder="Occupation" formControlName="Occupation">
+                                                    <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                                            
+                                                    <span *ngIf="RegisterForm.hasError('required', ['Occupation']) && isFormSubmitted" class="text-danger">
+                                                        Occupation is required.
+                                                    </span>
+                                                    <span *ngIf="RegisterForm.hasError('Occupation', ['Occupation']) && isFormSubmitted" class="text-danger">
+                                                        Occupation is Required
+                                                    </span>
+                                                    </div>
+                                            </div>
+                                        
+                                        </div>
+                                        <div class="form-group row" style="padding-left: 20%;">
+                                            
+                                            <label class="col-sm-3" style="padding-top: 6px;">Phone No</label>
+                                            <div class="col-md-5">
+                                                <div class="form-group has-feedback" [ngClass]="{'has-error': RegisterForm.get('Phone').errors && isFormSubmitted}">
+                                                    
+                                                <div class="form-group row">
+                                                    <div class="col-md-5">
+                                                        <div ngbDropdown class="d-inline-block dropdown" >
+                                                            <a class="btn btn-info" id="dropdownBasic1" ngbDropdownToggle>{{selectedCountry.Country}}</a>
+                                                            <div ngbDropdownMenu aria-labelledby="dropdownBasic1"  class="dropdown-primary scroll">
+                                                                <div class="ex1" style="height: 200px;">    
+                                                                    <a class="dropdown-header" >Select your Country code</a>
+                                                                    <a class="dropdown-item " (click)=selectCountry(item) *ngFor="let item of Countries;">{{item.Country}}</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                       </div>
+                                                    <div class="col-md-7">
+                                                        <input type="text" class="form-control" placeholder="Phone No" formControlName="Phone" (keypress)="keyPress($event)" >
+                                                    
+                                                    </div>
+                                                    <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                                            
+                                                    <span *ngIf="RegisterForm.hasError('required', ['Phone']) && isFormSubmitted" class="text-danger">
+                                                        Phone No is required.
+                                                    </span>
+                                                    <span *ngIf="RegisterForm.hasError('Phone', ['Phone']) && isFormSubmitted" class="text-danger">
+                                                        Phone No is Required
+                                                    </span>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                        
+                                        </div>
+                                        <div class="form-group row" style="padding-left: 20%;">
+                                            
+                                            <label class="col-sm-3" style="padding-top: 6px;"> Whats App No</label>
+                                            <div class="col-md-5">
+                                                <div class="form-group has-feedback" [ngClass]="{'has-error': RegisterForm.get('WPhone').errors && isFormSubmitted}">
+                                                    <input type="text" class="form-control" placeholder=" Whats App No" formControlName="WPhone" (keypress)="keyPress($event)" minlength=10 maxlength=10>
+                                                    <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                                            
+                                                    <span *ngIf="RegisterForm.hasError('required', ['WPhone']) && isFormSubmitted" class="text-danger">
+                                                        Whats App Phone No is required.
+                                                    </span>
+                                                    <span *ngIf="RegisterForm.hasError('WPhone', ['WPhone']) && isFormSubmitted" class="text-danger">
+                                                        Whats App Phone No is Required
+                                                    </span>
+                                                    </div>
+                                            </div>
+                                        
+                                        </div>
+                                        <div class="form-group row" style="padding-left: 20%;">
+                                            
+                                            <label class="col-sm-3" style="padding-top: 6px;">Email id of (Zoom/Online) </label>
+                                            <div class="col-md-5">
+                                                <div class="form-group has-feedback" [ngClass]="{'has-error': RegisterForm.get('Email').errors && isFormSubmitted}">
+                                                    <input type="email" class="form-control" placeholder="Email" formControlName="Email">
+                                                    <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                                            
+                                                    <span *ngIf="RegisterForm.hasError('required', ['Email']) && isFormSubmitted" class="text-danger">
+                                                        Email is required.
+                                                    </span>
+                                                    <span *ngIf="RegisterForm.hasError('Email', ['Email']) && isFormSubmitted" class="text-danger">
+                                                        Email is Required
+                                                    </span>
+                                                    </div>
+                                            </div>
+                                        
+                                        </div>
+                                        <div class="form-group row" style="padding-left: 20%;">
+                                            
+                                            <label class="col-sm-3" style="padding-top: 6px;">Present Address</label>
+                                            <div class="col-md-5">
+                                                <div class="form-group has-feedback" [ngClass]="{'has-error': RegisterForm.get('Email').errors && isFormSubmitted}">
+                                                    <textarea class="form-control" placeholder="Present Address" formControlName="Address"></textarea>
+                                                    <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                                            
+                                                    <span *ngIf="RegisterForm.hasError('required', ['Address']) && isFormSubmitted" class="text-danger">
+                                                        Address is required.
+                                                    </span>
+                                                    <span *ngIf="RegisterForm.hasError('Address', ['Address']) && isFormSubmitted" class="text-danger">
+                                                        Address is Required
+                                                    </span>
+                                                    </div>
+                                            </div>
+                                        
+                                        </div>
+                                        <div class="form-group row" style="padding-left: 20%;">
+                                            
+                                            <label class="col-sm-3" style="padding-top: 6px;">Course Selected</label>
+                                            <div class="col-md-5">
+                                                <div class="form-group has-feedback" [ngClass]="{'has-error': RegisterForm.get('Course').errors && isFormSubmitted}">
+                                                    <div class="form-group row">
+                                                        <div class="col-md-5">
+                                                            <div class="form-check-radio">
+                                                                <label class="form-check-label">
+                                                                  <input class="form-check-input" formControlName="Course" type="radio" name="Course" id="exampleRadios1" value="Dance & Yoga" >
+                                                                  Dance & Yoga
+                                                                  <span class="form-check-sign"></span>
+                                                                </label>
+                                                              </div>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <div class="form-check-radio">
+                                                                <label class="form-check-label">
+                                                                  <input class="form-check-input" formControlName="Course" type="radio" name="Course" id="exampleRadios1" value="Music & Yoga" >
+                                                                  Music & Yoga
+                                                                  <span class="form-check-sign"></span>
+                                                                </label>
+                                                              </div>
+                                                        </div>
+                                                    </div>
+                                                    <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                                            
+                                                    <span *ngIf="RegisterForm.hasError('required', ['Course']) && isFormSubmitted" class="text-danger">
+                                                        Course is Required
+                                                    </span>
+                                                    <span *ngIf="RegisterForm.hasError('Course', ['Course']) && isFormSubmitted" class="text-danger">
+                                                        Course is Required
+                                                    </span>
+                                                    </div>
+                                            </div>
+                                        
+                                        </div>
+                                        <div class="form-group row" style="padding-left: 20%;">
+                                            
+                                            <label class="col-sm-3" style="padding-top: 6px;">Have you learned Dance or Music before? If “Yes” give details</label>
+                                            <div class="col-md-5">
+                                                <div class="form-group has-feedback" [ngClass]="{'has-error': RegisterForm.get('DanceDetails').errors && isFormSubmitted}">
+                                                    <textarea class="form-control" placeholder="Details" formControlName="DanceDetails"></textarea>
+                                                    
+                                                    </div>
+                                            </div>
+                                        
+                                        </div>
+                                        <div class="form-group row" style="padding-left: 20%;">
+                                            
+                                            <label class="col-sm-7" style="padding-top: 6px;">Instructor & Co-ordinator: Mathew Sebastian (UG/PG/ Research Scholar) </label>
+                                            
+                                        
+                                        </div>
+                                        <div class="form-group row" style="padding-left: 20%;">
+                                            <div class="col-md-8">
+
+                                                <div class="form-group has-feedback" [ngClass]="{'has-error': RegisterForm.get('TC').errors && isFormSubmitted}">
+                                                    <div class="form-check" style="padding-left: 1%;">
+                                                        <label class="form-check-label" >
+                                                        <input class="form-check-input" type="checkbox" value="" formControlName="TC">
+                                                        I declare that the statements given above are correct and that the candidate will abide by all the regulations and the fee structure of the establishment
+                                                        <span class="form-check-sign"></span>
+                                                        </label>
+                                                    </div>
+                                                    <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                                            
+                                                    <span *ngIf="RegisterForm.hasError('required', ['TC']) && isFormSubmitted" class="text-danger">
+                                                        Kindly accept the Declaration
+                                                    </span>
+                                                    <span *ngIf="RegisterForm.hasError('TC', ['TC']) && isFormSubmitted" class="text-danger">
+                                                        Kindly accept the Declaration
+                                                    </span>
+                                                    </div>
+
+                                                
+                                            </div>
+                                        
+                                        </div>
+                                            
+                                                
+                                            
+
+                                         
+                                  
+                                        
+                                  
+                                        <p *ngIf="errorMsg" class="text-danger">{{errorMsg}}</p>
+                                  
+                                        <div class="row">
+                                          <div class="col-xs-8">
+                                          </div>
+                                          <div class="col-xs-4" style="padding-left: 32%;">
+                                            <button type="submit" class="btn btn-primary btn-block btn-flat">Enroll Now</button>
+                                          </div>
+                                          <div class="col-xs-4" style="padding-left: 5%;">
+                                            <a [routerLink]="['/home']"> <button type="button" class="btn btn-danger btn-block btn-flat">Back to home</button></a>
+                                          </div>
+                                        </div>
+                                      </form>
+                                
+                            </div>
+         
+    </div>
+</div>
+
+    <!-- reg end here -->
+
+
+   
+</div>
